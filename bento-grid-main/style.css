@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --purple100: hsl(254,88%,90%);
+    --purple500: hsl(256,67%,59%);
+    --yellow100: hsl(31,66%,93%);
+    --yellow500: hsl(39,100%,71%);
+    --white: hsl(0,0%,100%);
+    --black: hsl(0,0%,7%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font: 400 18px 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: hsl(0,0%,96%);
+    color: var(--black);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 83px 16px;
+}
+
+.gridContent {
+    display: grid;
+    width: 100%;
+    max-width: 1120px;
+    grid-template-areas: 
+        "cardGroup card-1 card-1 card-4"
+        "cardGroup card-2 card-3 card-4"
+        "cardGroup card-6 card-5 card-5";
+    grid-template-columns: repeat(4, minmax(0, 256px));
+    grid-template-rows: 323px 247px 247px;
+    gap: 32px;
+}
+
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+
+h1, .title-2, .title-3, .title-4 {
+    line-height: 95%;
+    font-weight: 500;
+}
+
+.title-2 {
+    font-size: 40px;
+}
+
+.title-3 {
+    font-size: 35px;
+}
+
+.title-4 {
+    font-size: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.italicText {
+    font-style: italic;
+}
+
+/* Individual card styles */
+#card-1 {
+    grid-area: card-1;
+    background-color: var(--purple500);
+    color: var(--white);
+    text-align: center;
+}
+
+#card-1 h1 .colorText {
+    color: var(--yellow500);
+}
+
+#card-1 .image img {
+    max-width: 190px;
+    margin-top: 22px;
+}
+
+#card-2 {
+    grid-area: card-2;
+    background-color: var(--white);
+    padding: 24px;
+}
+
+#card-3 {
+    grid-area: card-3;
+    background-color: var(--yellow500);
+    padding: 24px;
+}
+
+#card-4 {
+    grid-area: card-4;
+    background-color: var(--purple100);
+    padding: 32px;
+    text-align: center;
+}
+
+#card-5 {
+    grid-area: card-5;
+    background-color: var(--purple500);
+    color: var(--white);
+    flex-direction: row;
+    gap: 12px;
+}
+
+#card-6 {
+    grid-area: card-6;
+    background-color: var(--white);
+    padding: 24px;
+}
+
+#cardGroup {
+    grid-area: cardGroup;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#card-7, #card-8 {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+#card-7 {
+    background-color: var(--yellow100);
+    text-align: center;
+}
+
+#card-8 {
+    background-color: var(--yellow500);
+    text-align: center;
+}
